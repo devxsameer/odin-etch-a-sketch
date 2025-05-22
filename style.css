@@ -85,6 +85,10 @@ body {
 /* .item {
   border: 2px solid black;
 } */
-.active {
-  background-color: antiquewhite;
+/* Footer */
+.footer {
+  flex: 0 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
