@@ -5,8 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch a Sketch</title>
   </head>
+  <link rel="stylesheet" href="style.css" />
   <body>
+    <div class="btn-wrapper">
+      <button class="change-btn">Click Here To Change Grid</button>
+    </div>
     <div class="container"></div>
-    <script></script>
+    <script>
+      const container = document.querySelector(".container");
+      for (let i = 0; i < 16 * 16; i++) {
+        const item = document.createElement("div");
+        item.classList.add("item");
+        item.addEventListener("mouseenter", (e) => {
+          e.target.classList.add("active");
+        });
+        container.appendChild(item);
+      }
+    </script>
   </body>
 </html>
