@@ -7,20 +7,37 @@
   </head>
   <link rel="stylesheet" href="style.css" />
   <body>
-    <div class="btn-wrapper">
-      <button class="change-btn">Click Here To Change Grid</button>
+    <div class="header">
+      <h3>Etch-A-Sketch</h3>
+      <div class="header-wrapper">
+        <div class="color">
+          <input type="color" id="color-picker" value="#2d3436" />
+        </div>
+        <button class="change-btn btn">Click Here To Change Grid</button>
+        <button class="clear-btn btn">Clear</button>
+      </div>
+      <div class="radio-wrapper">
+        <span> Choose Mode: </span>
+        <div>
+          <input
+            type="radio"
+            name="mode"
+            class="radio"
+            id="color"
+            checked
+          /><label for="color">Color Mode</label>
+        </div>
+        <div>
+          <input type="radio" name="mode" id="random" class="radio" />
+          <label for="random">Random Color Mode</label>
+        </div>
+        <div>
+          <input type="radio" name="mode" id="eraser" class="radio" />
+          <label for="eraser">Eraser</label>
+        </div>
+      </div>
     </div>
     <div class="container"></div>
-    <script>
-      const container = document.querySelector(".container");
-      for (let i = 0; i < 16 * 16; i++) {
-        const item = document.createElement("div");
-        item.classList.add("item");
-        item.addEventListener("mouseenter", (e) => {
-          e.target.classList.add("active");
-        });
-        container.appendChild(item);
-      }
-    </script>
+    <script src="./script.js"></script>
   </body>
 </html>
